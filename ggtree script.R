@@ -15,7 +15,6 @@ get.data(tree) #returns a tibble of all the associated data
 SNPs_boot.treefile <- system.file("extdata", "sample.nwk", package="treeio")
 
 tree <- read.tree(SNPs_boot.treefile)
-tree2 <- groupClade(tree, c(26,24))
 ggtree(tree2) +
   geom_point(aes(shape=isTip, color=isTip, size=3)) +
   geom_tiplab(size=3, color="purple")
